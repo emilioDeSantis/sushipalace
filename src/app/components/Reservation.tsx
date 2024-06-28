@@ -6,7 +6,7 @@ const Reservation: React.FC = () => {
     return (
         <div
             style={{
-                backgroundColor: "#382A6E",
+                backgroundColor: "#423F50",
                 display: "flex",
                 flexDirection: "column",
                 boxShadow: "0px 0px 20px rgba(0, 0, 0, 1)",
