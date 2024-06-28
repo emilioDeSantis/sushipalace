@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -41,14 +42,18 @@ const Hero = () => {
             left: 0,
             height: '100%',
             width: '100%',
-            backgroundImage: `url(${src})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
             opacity: index === currentImageIndex ? 1 : 0,
             transition: 'opacity 2s ease-in-out',
             zIndex: index === currentImageIndex ? 1 : 0,
           }}
-        ></div>
+        >
+          <Image
+            src={src}
+            layout="fill"
+            objectFit="cover"
+            alt={`Hero Image ${index + 1}`}
+          />
+        </div>
       ))}
       <div style={{
         position: 'absolute',
@@ -56,7 +61,6 @@ const Hero = () => {
         width: '100%',
         display: 'flex',
         justifyContent: 'flex-end',
-        // paddingBottom: '3rem',
         flexDirection: 'column',
       }}>
         <h1 style={{
