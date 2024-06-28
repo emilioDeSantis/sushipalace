@@ -6,7 +6,7 @@ const Reservation: React.FC = () => {
     return (
         <div
             style={{
-                backgroundColor: "#8566DE",
+                backgroundColor: "#382A6E",
                 display: "flex",
                 flexDirection: "column",
                 boxShadow: "0px 0px 20px rgba(0, 0, 0, 1)",
@@ -67,7 +67,7 @@ const Reservation: React.FC = () => {
                     style={{
                         fontSize: "1.3rem",
                         fontWeight: 800,
-                        letterSpacing: "0.48em",
+                        letterSpacing: "0.12em",
                         marginTop: "3.6rem",
                         lineHeight: 1.5,
                         textTransform: "uppercase",
@@ -112,7 +112,7 @@ const Reservation: React.FC = () => {
                     style={{
                         fontSize: "1.3rem",
                         fontWeight: 800,
-                        letterSpacing: "0.48em",
+                        letterSpacing: "0.12em",
                         marginTop: "3.6rem",
                         lineHeight: 1.5,
                         textTransform: "uppercase",
@@ -158,7 +158,7 @@ const Reservation: React.FC = () => {
                     style={{
                         fontSize: "1.3rem",
                         fontWeight: 800,
-                        letterSpacing: "0.48em",
+                        letterSpacing: "0.12em",
                         marginTop: "3.6rem",
                         lineHeight: 1.5,
                         textTransform: "uppercase",
