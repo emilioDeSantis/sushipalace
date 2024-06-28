@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   const images = [
     '/hero1.png',  // Update these paths to your images
@@ -17,12 +18,14 @@ const Hero = () => {
   ];
 
   useEffect(() => {
+    const initialDelay = isInitialLoad ? 2000 : 4000;
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000); // Switch image every 4 seconds
+      setIsInitialLoad(false);
+    }, initialDelay); // Switch image every 4 seconds after the initial 2 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isInitialLoad]);
 
   return (
     <div style={{
